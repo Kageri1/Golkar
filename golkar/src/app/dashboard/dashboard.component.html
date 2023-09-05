@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+</head>
+<body>
+    <ng-container *ngIf="authService.isAuthenticated()">
+        <header class="topbar">
+            <nav class="navbar top-navbar navbar-expand-md">
+                <img src="../../assets/user.png" alt="icon" style="width: 40px; height: 40px; min-height: 40px;">
+                <div class="nama-profile">
+                    <p style="font-weight: 600;">{{loggedInUser}}</p>
+                    <p style="font-weight: 400;">Admin account</p>
+                </div>
+            </nav>
+                
+        </header>
+        <aside class="left-sidebar">
+            <div class="scroll-sidebar">
+                <nav class="sidebar-nav">
+                    <div class="judul" style="cursor: pointer;">
+                        <img src="../../assets/logo golkar 1.png" alt="Golkar">
+                        <p style="font-size: 15px; margin: 5px;">BSNPG TPS</p>
+                    </div>  
+                    <div class="sidebarnav">
+                        <div class="dashboard">
+                            <p style="margin-left: 5px;">Dashboard</p>
+                            <hr>
+                            <ul>
+                                <li class="sidebar-item pt-2 active">
+                                    <img src="../../assets/Vector.png" alt="peta-sebaran">
+                                    <a routerLink="/dashboard/peta-sebaran" class="sidebar-link "><span class="hide-menu">Peta Sebaran</span></a>
+                                </li>
+                                <li class="sidebar-item pt-2">
+                                    <img src="../../assets/monitor.png" alt="Monitoring">
+                                    <a routerLink="/dashboard/peta-sebaran" class="sidebar-link"><span class="hide-menu">Monitoring Anggota</span></a>
+                                </li>
+                                <li class="sidebar-item pt-2">
+                                    <img src="../../assets/User-Outline (1).png" alt="Anggota">
+                                    <a routerLink="/dashboard/peta-sebaran" class="sidebar-link"><span class="hide-menu">Anggota BSPNG TPS</span></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="laporan" style="margin-top: 15px;">
+                            <p style="margin-left: 5px;">Laporan</p>
+                            <hr>
+                            <ul>
+                                <li class="sidebar-item pt-2">
+                                    <img src="../../assets/doc.png" alt="rekap-anggota" alt="rekap-anggota">
+                                    <a routerLink="" class="sidebar-link"><span class="hide-menu">Rekap Anggota</span></a>
+                                </li>
+                                <li class="sidebar-item pt-2">
+                                    <img src="../../assets/doc.png" alt="laporan-2">
+                                    <a routerLink="" class="sidebar-link"><span class="hide-menu">Laporan 2</span></a>
+                                </li>
+                                <li class="sidebar-item pt-2">
+                                    <img src="../../assets/doc.png" alt="laporan-3">
+                                    <a routerLink="" class="sidebar-link"><span class="hide-menu">Laporan 3</span></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="master-data" style="margin-top: 15px;">
+                            <p style="margin-left: 5px;">Master Data</p>
+                            <hr>
+                            <ul>
+                                <li class="sidebar-item pt-2">
+                                    <img src="../../assets/iconamoon_profile-fill.png" alt="Master">
+                                    <a routerLink="/dashboard/peta-sebaran" class="sidebar-link"><span class="hide-menu">Master User</span></a>
+                                </li>
+                                <li class="sidebar-item pt-2">
+                                    <img src="../../assets/el_group.png" alt="Group">
+                                    <a routerLink="/dashboard/peta-sebaran" class="sidebar-link"><span class="hide-menu">Group</span></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="logout">
+                            <img src="../../assets/Group 101876.svg" alt="logout">
+                            <a href="#" (click)="onLogout()" class="sidebar-link" >Log out</a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </aside>
+        <div class="page-wrapper" style="min-height: 250px; margin-left: 300px;">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="white-box">
+                            <h3 class="box-title" style="text-transform: uppercase; font-weight: 600; font-size: 18px;">Peta Sebaran BSNPG TPS</h3>
+                            <p style="font-weight: 500; color: #999999;">Data sebaran Anggota BSNPG TPS</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+                    <div class="white-box">
+                        <div id="map"></div>
+                    </div>
+                </div>
+                <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+                    <div class="white-box">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    
+            <!-- <div class="perkembangan">
+                <div class="judul-perkembangan">
+                    <h3>perkembangan bsnpg tps</h3>
+                    <p>Perkembangan Anggota BSNPG TPS</p>
+                </div>
+                <canvas id="lineChart"></canvas>
+            </div> -->
+        
+        <!-- <router-outlet></router-outlet> -->
+    </ng-container>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<div class="container-fluid">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-xxl">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="card-body p-md-5 ms-2 login-left">
+                            <div class="text-center">
+                                <img src="../../../assets/logoGolkar.png"style="width: 120px" alt="logoGolkar"/>
+                                <h4 class="mt-1 mb-3 pb-1" style="color: #404040; font-weight: 700; font-size: 30px;">BSNPG TPS</h4>
+                            </div>
+
+                            <form (ngSubmit)="onLogin()" >
+                                <div class="mb-4">
+                                    <label class="form-label" for="username">Username</label>
+                                    <input type="text" class="username form-control" placeholder="Admin" [(ngModel)]="username" name="username"/>
+                                </div>
+                                <div class="mb-4">
+                                    <label class="form-label" for="password">Password</label>
+                                    <input [type]="showPassword ? 'text' : 'password'"  class="password form-control" placeholder="Password" [(ngModel)]="password" name="password"/>
+                                </div>
+
+                                <div class="form-check mb-2">
+                                    <input type="checkbox" class="form-check-input" id="showPassword" (change)="togglePasswordVisibility()"> Show Password
+                                </div>
+
+                                <div class="text-center pt-1 pb-1">
+                                    <button class="btn btn-block fa-lg mb-3 " type="submit" style="background-color: #FCE03A; color: #FFFFFF; width: 150px; height: 45px; font-size: 20px; text-transform: uppercase; font-weight: 700;">Login</button>
+                                    <a class="d-block small" href="#!" style="color: #001AFF80; font-weight: 700;">Lupa Password?</a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 d-flex align-items-center login-right" style="background-color: #FCE03A;">
+                        <div class="px-3 py-4 p-md-5 mx-md-4 img img-fluid" >
+                            <img class="img-fluid" src="../../../assets/logoGolkarbg.png">
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+</div>

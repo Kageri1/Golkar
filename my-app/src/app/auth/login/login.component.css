@@ -1,0 +1,40 @@
+label{
+    margin-left: 10px;
+    margin-bottom: -18px;
+    color: #00000080;
+    font-weight: 700;
+}
+
+.username{
+    height: 50px;
+    border-radius: 10px;
+    border: 1px solid #00000080;
+    color: #00000080;
+    background-color: #F2F2F2;
+}
+
+.password{
+    height: 50px;
+    border-radius: 10px;
+    border: 1px solid #00000080;
+    color: #00000080;
+    background-color: #F2F2F2;
+}
+
+::placeholder{
+    color: #00000033;
+    font-weight: 700;
+}
+
+@media screen and (max-width: 991.5px) {
+    .img{
+        display: none;
+    }
+}
+@media screen and (max-width: 767px) {
+    .login-left{
+        padding: 48px;
+    }
+}
+
+

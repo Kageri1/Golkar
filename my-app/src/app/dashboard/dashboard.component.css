@@ -1,0 +1,132 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+ul{
+    cursor: pointer;
+}
+
+.topbar{
+    position: relative;
+    display: flex;
+    justify-content: end;
+    background-color: #000000;
+    color: #FFFFFF;
+    height: 60px;
+}
+.navbar{
+    min-height: 60px;
+    cursor: pointer;
+    margin-right: 30px;
+}
+.nama-profile{
+    margin-left: 10px;
+}
+
+.left-sidebar {
+    padding-top: 20px;
+    position: absolute;
+    width: 240px;
+    height: 100%;
+    top: 10px;
+    left: 20px;
+    z-index: 10;
+    border-radius: 20px;
+    border: 1px #F3BA47;
+    background:linear-gradient(180deg, #FCEE05 0%, #FCD858 100%);
+    box-shadow: 1px 1px 20px 0px #00000026;
+    ;
+}
+.scroll-sidebar {
+    height: calc(100% - 20px);
+    position: relative;
+}
+.judul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: 700;
+    color: #404040;
+}
+.sidebarnav *{
+    color: #746E09;
+}
+.sidebarnav p{
+    font-weight: 400;
+    font-size: 15px;
+}
+.sidebar-item img{
+    width: 22px;
+}
+.sidebar-item{
+font-weight: 600;
+background-color: #FFFFFF66;
+width:200px;
+font-size: 13px;
+margin-top: 10px;
+padding: 5px;
+height: 30px;
+&:hover {
+    background: linear-gradient(180deg, #FFCB63 0%, #EAAD11 100%);
+}
+&:hover span {
+    color: #FFFFFF;
+}
+&.active {
+    background: linear-gradient(180deg, #FFCB63 0%, #EAAD11 100%);
+}
+&.active span{
+    font-weight: 600;
+    color: #FFFFFF;
+}
+}
+.sidebar-link{
+    margin-left: 10px;
+}
+
+.logout{
+    margin-left: 50px;
+    width:150px;
+    margin-top: 20px;
+    padding: 5px;
+    height: 30px;
+    font-weight: 600;
+    font-size: 13px;
+    background-color: #FFFFFF66;
+    &:hover {
+        background: linear-gradient(180deg, #FFCB63 0%, #EAAD11 100%);
+    }
+    &:hover a {
+        color: #FFFFFF;
+    }
+    &.active {
+        background: linear-gradient(180deg, #FFCB63 0%, #EAAD11 100%);
+    }
+    &.active a{
+        font-weight: 600;
+        color: #FFFFFF;
+    }
+}
+.logout img{
+    width: 20px;
+}
+
+.white-box {
+    border: 1px solid #F2F2F2;
+    border-radius: 10px;
+    padding: 25px;
+    margin-bottom: 10px;
+    background:linear-gradient(0deg, #FFFFFF, #FFFFFF);
+    box-shadow: 1px 1px 10px 0px #0000001A;
+}
+#map{
+    width: 100%;
+    height: 350px;
+}
+
+
+.page-wrapper>.container-fluid {
+    padding: 25px;
+}
